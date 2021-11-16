@@ -30,7 +30,7 @@ const manageCarSchema = new mongoose.Schema({
   timestamps: true,
 });
 
-// Creating a Manage Car Model
+// Creating a Car Model
 const Car = mongoose.model('Car', manageCarSchema);
 
 module.exports = Car;
