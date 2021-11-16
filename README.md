@@ -23,7 +23,7 @@ Express.js, Node.js, MongoDB, Mongoose, AJV, http-status, env, Eslint, Docker, P
 
 1. First you need to clone or download the Zip file in your local machine.
 2. After downloading the Zip file open it on any IDE which supports JavaScript.
-   ( For Instance im using Visual Studio Code. Download Link: https://code.visualstudio.com/download )
+   2. ( For Instance im using Visual Studio Code. Download Link: https://code.visualstudio.com/download )
 3. After opening the project on VS Code, make sure you have enable the EsLint and (Select End of Line Sequence should be LF not CRLF). Also Delete the **Data** Folder, you don't    need it right now.
 4. As i mentioned above that this Application is Dockerized, it means you don't need to set up the Project Environment or to install all dependices.
    Docker will do that for YOU :), 
