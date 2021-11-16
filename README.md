@@ -24,9 +24,9 @@ Express.js, Node.js, MongoDB, Mongoose, AJV, http-status, env, Eslint, Docker, P
 1. First you need to clone or download the Zip file in your local machine.
 2. After downloading the Zip file open it on any IDE which supports JavaScript.
    ( For Instance im using Visual Studio Code. Download Link: https://code.visualstudio.com/download )
-3. After opening the project on VS Code, make sure you have enable the EsLint and (Select End of Line Sequence should be LF not CRLF).
-4. As i mentioned above that this Application is Dockerized, it means you don't to set up the Project Environment and install all dependices.
-   ( Docker will do that for YOU :) )
+3. After opening the project on VS Code, make sure you have enable the EsLint and (Select End of Line Sequence should be LF not CRLF). Also Delete the **Data** Folder, you don't    need it right now.
+4. As i mentioned above that this Application is Dockerized, it means you don't need to set up the Project Environment or to install all dependices.
+   Docker will do that for YOU :), 
 5. You need to run this command in your terminal ( `docker pull asadraza270/cognigy_car_api:latest` ) to pull/install the image in your docker or working directory                    from my public docker hub repository.
 6. Then check wether you have installed the image or not by ( `docker images` )
 7. As i have already push my API image on docker hub now you don't need to make the build again.
