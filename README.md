@@ -41,6 +41,7 @@ Express.js, Node.js, MongoDB, Mongoose, AJV, http-status, env, Eslint, Docker, P
 14. Now open Robo 3T and creates the connection by setting these port **27017** and Address = **localhost**
 15. When connected successfully, now you can hit the API's on Postman using ( http://localhost:3000/cars )
     I will also provide you the postman collection file which you can import in your Postman directly.
+    Heres the link (https://drive.google.com/file/d/1s3s2cCf2rgts_5tbUPNT8vDJzAZedZlX/view?usp=sharing)
 16. If you face any problem related to setting up the project please send me the query on my email address `razaasad270@gmail.com`   
 
 Thanks for your time.
