@@ -2,6 +2,11 @@ const httpStatus = require('http-status');
 const Car = require('../models/cars');
 const ApiError = require('../utils/ApiError');
 
+/**
+ * Create a Car
+ * @param {Object} carBody
+ */
+
 const createCar = async (carBody) => {
   const insertCar = await Car.create(carBody);
   if (!insertCar) {
