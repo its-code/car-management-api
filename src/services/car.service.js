@@ -5,6 +5,7 @@ const ApiError = require('../utils/ApiError');
 /**
  * Create a Car
  * @param {Object} carBody
+ * @returns {Object} - success message
  */
 
 const createCar = async (carBody) => {
@@ -16,6 +17,12 @@ const createCar = async (carBody) => {
   return { message: 'Car created Successfully!' };
 };
 
+/**
+ * Get car by id
+ * @param {ObjectId} id
+ * @returns {Promise<Car>}
+ */
+
 const getCarById = async (carID) => {
   const { _id } = carID;
   const findCar = await Car.findOne({ _id });
@@ -25,12 +32,28 @@ const getCarById = async (carID) => {
   return findCar;
 };
 
-const getAllCars = async (paginationObj) => {
-  const { page, limit } = paginationObj;
+/**
+ * Query for cars
+ * @param {Object} paginationOpt - Pagination Options
+ * @param {number} [options.limit] - Maximum number of results per page
+ * @param {number} [options.page] - Current page
+ * @returns {Promise<QueryResult>}
+ */
+
+const getAllCars = async (paginationOpt) => {
+  const { page, limit } = paginationOpt;
   const offset = (page - 1) * limit;
   const cars = await Car.find().limit(limit).skip(offset).exec();
   return cars;
 };
+
+/**
+ * Update Car by ID
+ * @param {Object} updateCarObj
+ * @param {ObjectId} updateCarObj._id
+ * @param {Object} updateCarObj.body
+ * @returns {Promise<car>}
+ */
 
 const updateCarById = async (updateCarObj) => {
   const { _id, body } = updateCarObj;
@@ -59,6 +82,12 @@ const updateCarById = async (updateCarObj) => {
 
   return response;
 };
+
+/**
+ * Delete car by id
+ * @param {ObjectId} carID
+ * @returns {Object} - Success Message response
+ */
 
 const deleteCarById = async (carID) => {
   const { _id } = carID;
