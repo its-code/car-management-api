@@ -44,6 +44,9 @@ const getAllCars = async (paginationOpt) => {
   const { page, limit } = paginationOpt;
   const offset = (page - 1) * limit;
   const cars = await Car.find().limit(limit).skip(offset).exec();
+  if (cars.length === 0) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'No Cars Found!');
+  }
   return cars;
 };
 
