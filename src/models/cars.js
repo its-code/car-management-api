@@ -20,6 +20,7 @@ const manageCarSchema = new mongoose.Schema({
     type: Number,
     required: true,
     trim: true,
+    minlength: 4,
   },
   type: {
     type: String,
